@@ -21,9 +21,6 @@ Une page vue.js fonctionne avec des composants
 
 @click = c'est un raccourci vue.js qui va permettre d'appeller une methode situee dans le scrips 'methods'
 
-v-show
-v-model
-
 // au lieu de reflechir avec des "if" on met directement dans le html vue-show ou autre pour avoir le display de ce qu'on veut.  -->
 
 Pour utiliser un pre-processeur (type SASS) avec Vue, on peut voir du cote de [vue-loader](https://github.com/vuejs/vue-loader), avec l'integration des [css-modules](https://vue-loader.vuejs.org/guide/css-modules.html#usage).  
@@ -42,16 +39,16 @@ On a 3 fichiers : le HTML, le CSS, le JS.
 3) les fichiers de dependances sont generes dans le repertoire, avec le src ou se trouve main.js et App.vue
 4) Avec le terminal aller dans le folder du projet et lancer :~$ npm run serve
 
-##### Sous le JS
+##### Sous le JS (no CLI)
 
 On declare l'app Vue, :
 
 - *el* va cibler un element dans le html avec in ID, sur lequel on greffera vue.js
 - *data* sera un objet contenant des definitions (comme dans .js) avec des valeurs. Ces valeurs changees dans le vont s'adapter sur la page dynamiquement.
 
-var app = new Vue({  
-    el: '#app',
-    data: {
+var app = new Vue({  // parametre qui faire faire fonctionner l'app
+    el: '#app', // propriete permettant d'indiquer sur quel element ca etre greve Vue.js k
+    data: { // data est un gros tableau contenant toutes les variables qu'on va injecter dans notre app Vue
         message: 'Hello Vue!'
     }
 });
@@ -69,6 +66,8 @@ Ainsi on peut aussi reatribuer autre chose a l'objet tel que :
 - v-if : attribut "directive", cad que *v* suivi de *-* signifie que c'est un attribut special de Vue. La declaration d'une propriete de l'attribut veut dire que la div/span est affichee si la propriete est evaluee comme vraie.  
 C'est une forme de conditionnelle sur Vue.js.  
 
+- v-show: permet d'afficher un element si la variable est bien definie, et de ne pas l'afficher si la variable a un etat *false*. La difference entre v-show et v-if c'est juste la maniere de faire les choses.  
+
 - v-else: 
 
 - v-else-if:
@@ -79,20 +78,20 @@ C'est une forme de conditionnelle sur Vue.js.
 
 - v-pre: 
 
-- v-show:
-
 - v-text: 
 
+- v-on : permettre aux utilisateurs d'interagir avec l'app Vue.
 
 ###### [Rendu de liste](https://fr.vuejs.org/v2/guide/list.html)
 
 - v-for : autre attribut, permettant de simuler une boucle for et ainsi d'ajouter des elements. Comme pour une to-do liste.  
 
-
             <li v-for="(stuff, index) in todos" :key="index">
                 {{ stuff.text }}
             </li>
 
-- v-on : permettre aux utilisateurs d'interagir avec l'app Vue.
+##### *methods* dans VueJS
+
+Lorsqu'on cree une nouvelle methode et que l'on l'appelle par la suite, elle changera la valeur d'une variable definie dans *data* (selon ce qu'on veut: booleen ou autre).
 
 ##### Routing dans Vue.js
