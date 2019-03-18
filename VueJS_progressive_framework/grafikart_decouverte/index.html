@@ -8,13 +8,12 @@
     </head>
     <body>
         <div id="app">
-            <i class="close icon" v-on:click="close"></i>
-            <!-- <a :href="link" :title="message">{{ message }}</a> 
-            <ul>
-                <li v-for="person in persons">{{ person }}</li>
-            </ul> -->
             <div v-if="success">
-                <p>Bravo pour votre enregistrement</p>
+                <input  type="text" value="message">
+                <ul>
+                    <li v-for="person in persons">{{ person }}</li>
+                </ul> 
+                <p v-on:click="close">Bravo pour votre enregistrement</p>
             </div>
 <!--             <div v-if="!success">
                 <p>Fail : it didn't work !</p>

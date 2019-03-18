@@ -3,7 +3,7 @@ new Vue ({
     data: {
         message: "Salut les gens",
         link: "https://github.com/corneliushka",
-        success: false,
+        success: true,
         persons: ['Johnson', 'Lovelace', 'Schwartz', 'Hamilton']
     },
 

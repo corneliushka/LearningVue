@@ -66,7 +66,7 @@ Ainsi on peut aussi reatribuer autre chose a l'objet tel que :
 - v-if : attribut "directive", cad que *v* suivi de *-* signifie que c'est un attribut special de Vue. La declaration d'une propriete de l'attribut veut dire que la div/span est affichee si la propriete est evaluee comme vraie.  
 C'est une forme de conditionnelle sur Vue.js.  
 
-- v-show: permet d'afficher un element si la variable est bien definie, et de ne pas l'afficher si la variable a un etat *false*. La difference entre v-show et v-if c'est juste la maniere de faire les choses.  
+- v-show: permet d'afficher un element ski la variable est bien definie, et de ne pas l'afficher si la variable a un etat *false*. La difference entre v-show et v-if c'est juste la maniere de faire les choses.  
 
 - v-else: 
 
